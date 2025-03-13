@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -7,12 +8,15 @@ body {
     background-color: #000;
     color: #fff;
     font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevents content from overflowing the screen */
 }
 
 .tetris-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
+    overflow: hidden; /* Prevents content from overflowing the container */
 }
 
 canvas {
@@ -20,7 +24,19 @@ canvas {
     border: 2px solid #fff;
 }
 
-.score {
+.controls {
     margin-top: 20px;
-    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line if needed */
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
 }

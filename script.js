@@ -241,6 +241,26 @@ document.addEventListener('keydown', event => {
     }
 });
 
+document.getElementById('leftButton').addEventListener('click', () => {
+    playerMove(-1);
+});
+
+document.getElementById('rightButton').addEventListener('click', () => {
+    playerMove(1);
+});
+
+document.getElementById('downButton').addEventListener('click', () => {
+    playerDrop();
+});
+
+document.getElementById('rotateCWButton').addEventListener('click', () => {
+    playerRotate(1);
+});
+
+document.getElementById('rotateCCWButton').addEventListener('click', () => {
+    playerRotate(-1);
+});
+
 playerReset();
 updateScore();
 update();
